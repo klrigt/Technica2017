@@ -57,7 +57,7 @@
         <activity android:name=".Match" />
         <activity android:name=".qrgenerator" />
         <activity android:name=".Settings" />
-        <activity android:name=".Redeem"></activity>
+        <activity android:name=".Redeem" />
         <activity
             android:name=".Connect"
             android:parentActivityName=".Match">
@@ -72,6 +72,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Connect" />
         </activity>
+        <activity android:name=".alertnotif"></activity>
     </application>
 
 </manifest>
