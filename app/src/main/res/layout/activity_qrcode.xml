@@ -35,12 +35,13 @@
 
         <Button
             android:id="@+id/gen_btn"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="100dp"
             android:text="GIMME ME QR CODE"
-            android:textColor="@color/colorAccent" />
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <ImageView
