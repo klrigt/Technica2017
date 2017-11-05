@@ -7,21 +7,19 @@
     tools:context="com.example.krodrigo13.technica2017.SignUp">
 
     <EditText
+        android:id="@+id/usernameSignup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextUserName"
-        android:hint="User Name"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="User Name"
+        app:layout_constraintBottom_toTopOf="@+id/passwordSignup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.909">
 
         <requestFocus />
@@ -30,7 +28,7 @@
     <EditText
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextPassword"
+        android:id="@+id/passwordSignup"
         android:hint="Password"
         android:inputType="textPassword"
         android:layout_marginLeft="8dp"
@@ -42,14 +40,14 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintVertical_bias="0.92"
-        app:layout_constraintBottom_toTopOf="@+id/editTextConfirmPassword"
+        app:layout_constraintBottom_toTopOf="@+id/confirmPW"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp" />
 
     <EditText
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextConfirmPassword"
+        android:id="@+id/confirmPW"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:layout_marginLeft="8dp"
@@ -58,7 +56,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/editCellNumber"
+        app:layout_constraintBottom_toTopOf="@+id/cellSignup"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintVertical_bias="0.941"
@@ -68,10 +66,10 @@
     <EditText
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editCellNumber"
+        android:id="@+id/cellSignup"
         android:hint="Cellphone Number"
         android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintBottom_toTopOf="@+id/emailSignup"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -83,7 +81,7 @@
     <EditText
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editEmail"
+        android:id="@+id/emailSignup"
         android:hint="Email"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
