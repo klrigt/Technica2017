@@ -17,23 +17,35 @@ public class SignIn extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        EditText username = (EditText) findViewById(R.id.username);
-        EditText password = (EditText) findViewById(R.id.password);
+        final EditText username = (EditText) findViewById(R.id.username);
+        final EditText password = (EditText) findViewById(R.id.password);
         Button signinBut = (Button) findViewById(R.id.signinbutton);
 
         signinBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignIn.this, MainMenu.class));
+                if(!(username.getText().toString().trim().equals("")) &&
+                        !(password.getText().toString().trim().equals("")))
+                {
+                    startActivity(new Intent(SignIn.this, MainMenu.class));
+                    Toast.makeText(getApplicationContext(), "Signing In" , Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+
+                    Toast.makeText(getApplicationContext(), "Please enter a valid username and " +
+                            "password", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
     }
 
-
+    /*
     public void enterMain(View view)
     {
         Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
     }
-
+    */
 }

@@ -10,18 +10,21 @@ import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
 
-    EditText usernameSignup = (EditText) findViewById(R.id.usernameSignup);
-    EditText passwordSignup = (EditText) findViewById(R.id.passwordSignup);
-    EditText confirmPW = (EditText) findViewById(R.id.confirmPW);
-    EditText cellSignup = (EditText) findViewById(R.id.cellSignup);
-    EditText emailSignup = (EditText) findViewById(R.id.emailSignup);
-    Button createAccount = (Button) findViewById(R.id.buttonCreateAccount);
+    private boolean flag = false;
+    private boolean flag2 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        final EditText usernameSignup = (EditText) findViewById(R.id.usernameSignup);
+        final EditText passwordSignup = (EditText) findViewById(R.id.passwordSignup);
+        final EditText confirmPW = (EditText) findViewById(R.id.confirmPW);
+        final EditText cellSignup = (EditText) findViewById(R.id.cellSignup);
+        final EditText emailSignup = (EditText) findViewById(R.id.emailSignup);
+        Button createAccount = (Button) findViewById(R.id.buttonCreateAccount);
 
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,18 +37,30 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Creating an account"
                             , Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SignUp.this, MainMenu.class));
+                    flag = true;
+
                 }
-                else{
+                /*
+                if(!(passwordSignup.getText().toString().trim().equals(confirmPW.getText().toString().trim()))){
+                    Toast.makeText(getApplicationContext(), "Password does not match. Please try again."
+                            , Toast.LENGTH_SHORT).show();
+                    flag2 = true;
+                }
+                */
+                if(!flag){
+
                     Toast.makeText(getApplicationContext(), "Please enter all of your " +
                             "information", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
     }
-
+/*
     public void enterMain(View view)
     {
         Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
     }
+    */
 }

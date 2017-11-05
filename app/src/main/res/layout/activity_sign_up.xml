@@ -98,7 +98,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/buttonCreateAccount"
         android:text="Create Account"
-        android:onClick="enterMain"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -22,6 +23,15 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         Button SL = (Button) findViewById(R.id.button11);
+        Button logout = (Button) findViewById(R.id.logoutbutton);
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Logging Out" , Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainMenu.this, HomeScreen.class));
+            }
+        });
 
         SL.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,20 +46,22 @@ public class MainMenu extends AppCompatActivity {
                 builder.setCancelable(true);
                 builder.setTitle("She needs you!");
                 builder.setMessage("Emily Le needs " + quantity + " pads!\n"
-                        + "Her contact information is " + cellPhone + " and "
-                        + email +"\nShe is " + distance + " miles away from you. Please help her!");
+                        + "Number: " + cellPhone + "\nEmail: "
+                        + email +"\nShe is " + distance + " miles away from you.\n\nPlease help her!");
 
-                builder.setNegativeButton("Decline", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Decline", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.cancel();
-                        startActivity(new Intent(MainMenu.this, MainMenu.class));
+                        //startActivity(new Intent(MainMenu.this, MainMenu.class));
+                        Toast.makeText(getApplicationContext(), "Help Declined", Toast.LENGTH_SHORT).show();
                     }
                 });
 
-                builder.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Accept", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(getApplicationContext(), "Thank you for accepting!", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(MainMenu.this, scannerpage.class));
                     }
                 });
@@ -57,13 +69,13 @@ public class MainMenu extends AppCompatActivity {
             }
         });
     }
-
+/*
     public void signOut(View view)
     {
         Intent intent = new Intent(this, HomeScreen.class);
         startActivity(intent);
     }
-
+*/
     public void findLifeSaver(View view)
     {
         Intent intent = new Intent(this, Match.class);
