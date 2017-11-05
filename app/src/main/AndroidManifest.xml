@@ -22,21 +22,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeScreen" >
+        <activity android:name=".HomeScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignIn" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".MainMenu" />
+        <activity
+            android:name=".SignIn"
+            android:parentActivityName=".HomeScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:parentActivityName=".HomeScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
+        <activity
+            android:name=".MainMenu"
+            android:parentActivityName=".SignIn">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
         <activity android:name=".acceptpage" />
         <activity android:name=".declinepage" />
         <activity android:name=".provider" />
         <activity android:name=".scannerpage" />
         <activity android:name=".Match" />
-        <activity android:name=".qrgenerator"></activity>
+        <activity android:name=".qrgenerator" />
+        <activity android:name=".Settings" />
+        <activity android:name=".Redeem"></activity>
     </application>
 
 </manifest>
