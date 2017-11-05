@@ -56,8 +56,25 @@
         <activity android:name=".scannerpage" />
         <activity android:name=".Match" />
         <activity android:name=".qrgenerator" />
+<<<<<<< HEAD
         <activity android:name=".Settings" />
         <activity android:name=".Redeem"></activity>
+=======
+        <activity
+            android:name=".Connect"
+            android:parentActivityName=".Match">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Match" />
+        </activity>
+        <activity
+            android:name=".QRCode"
+            android:parentActivityName=".Connect">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Connect" />
+        </activity>
+>>>>>>> 1ae8b62ff6674bb059e58295f9d2e50524d2622e
     </application>
 
 </manifest>
