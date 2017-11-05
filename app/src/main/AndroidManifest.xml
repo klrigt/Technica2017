@@ -29,15 +29,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignIn" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".MainMenu" />
+        <activity
+            android:name=".SignIn"
+            android:parentActivityName=".HomeScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:parentActivityName=".HomeScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
+        <activity
+            android:name=".MainMenu"
+            android:parentActivityName=".SignIn">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
         <activity android:name=".acceptpage" />
         <activity android:name=".declinepage" />
         <activity android:name=".provider" />
         <activity android:name=".scannerpage" />
         <activity android:name=".Match" />
         <activity android:name=".qrgenerator" />
+        <activity android:name=".Settings" />
+        <activity android:name=".Redeem"></activity>
         <activity
             android:name=".Connect"
             android:parentActivityName=".Match">
