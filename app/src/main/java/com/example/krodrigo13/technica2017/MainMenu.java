@@ -32,7 +32,7 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void redeemPoints()
+    public void redeemPoints(View view)
     {
         Intent intent = new Intent(this, Redeem.class);
         startActivity(intent);
