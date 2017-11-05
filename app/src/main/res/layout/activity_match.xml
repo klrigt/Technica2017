@@ -29,6 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginLeft="30dp"
             android:text="Small"
             android:textColor="?android:attr/textColorHighlightInverse"
             android:textSize="24sp" />
@@ -37,6 +38,7 @@
             android:id="@+id/plain_text_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
             android:hint="Small Quantity"
             android:inputType="text"
             tools:layout_editor_absoluteX="173dp" />
@@ -54,6 +56,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginLeft="30dp"
             android:text="Medium"
             android:textColor="?android:attr/textColorHighlightInverse"
             android:textSize="24sp" />
@@ -62,6 +65,7 @@
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
             android:hint="Medium Quantity"
             android:inputType="text" />
     </LinearLayout>
@@ -77,6 +81,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginLeft="30dp"
             android:text="Large"
             android:textColor="?android:attr/textColorHighlightInverse"
             android:textSize="24sp" />
@@ -85,6 +90,7 @@
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
             android:hint="Large Quantity"
             android:inputType="text" />
     </LinearLayout>
@@ -94,6 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
         android:text="Wings"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp" />
